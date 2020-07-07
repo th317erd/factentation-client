@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      * {
+        border-radius: 1rem;
+        border-width: 0;
+        border-style: solid;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        position: relative;
+      }
+
+      html,body {
+        font-size: 10px;
+        background-color:#222;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      div,h1,p {
+        display: flex;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+
+      .statement {
+        flex-direction: column;
+        color: white;
+        padding: 2rem;
+        background-color: #666;
+      }
+
+      .statement .header {
+        flex: 0 0 auto;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        padding-bottom: 1rem;
+      }
+
+      .statement .header .evaluation {
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+        font-weight: 800;
+        padding-right: 3rem;
+      }
+
+      .statement .header .evaluation::after {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate3d(0, -50%, 0);
+      }
+
+      .statement .header .evaluation.true {
+        color: springgreen;
+      }
+      .statement .header .evaluation.true::after {
+        content: '✓';
+        font-size: 3rem;
+      }
+
+      .statement .header .evaluation.false {
+        color: red;
+      }
+      .statement .header .evaluation.false::after {
+        content: '✗';
+        font-size: 2.5rem;
+      }
+
+      .statement .footer {
+        flex: 0 0 auto;
+      }
+
+      .statement .body {
+        flex: 1 0 auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+
+      .statement .title {
+
+      }
+
+      .statement .declaration {
+        font-size: 2rem;
+      }
+    </style>
+
+    <script>
+      // setTimeout(function() {
+      //   location.reload();
+      // }, 250);
+    </script>
+  </head>
+
+  <body>
+    <div class="statement">
+      <div class="header">
+        <h1 class="title">Statement: Global Warming is Man Made.</h1>
+        <div class="evaluation true">True</div>
+      </div>
+
+      <div class="body">
+        <p class="declaration">This statement declares that as of the 20th centery Global Warming is a man made phenomenon.</p>
+      </div>
+
+      <div class="footer">
+        <div class="context">
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
